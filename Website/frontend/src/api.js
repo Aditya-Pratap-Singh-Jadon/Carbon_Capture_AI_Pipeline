@@ -1,6 +1,13 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const isLocal =
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1';
+
+
+const API_URL = isLocal
+  ? 'http://localhost:5000/api'
+  : 'https://carbon-capture-ai-pipeline.onrender.com/api';
 
 export const api = {
   // Stats
