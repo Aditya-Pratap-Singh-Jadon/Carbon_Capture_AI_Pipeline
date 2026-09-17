@@ -1,0 +1,19 @@
+carbon_credit:
+  # Verification decision thresholds
+  verification:
+    max_normalized_residual_tolerance: 3.0  # Max std devs for individual residual
+    mean_normalized_residual_tolerance: 1.5  # Mean normalized residual threshold
+    max_constraint_violation_tolerance: 1.0e-3
+    min_confidence_score: 0.80
+
+  # Handling for F_valid
+  f_valid:
+    mode: "input"  # 'input', 'epinn_predicted', or 'consistency_calculated'
+    default_fallback: 0.95
+    penalty_per_residual_std: 0.05
+
+  # Default multipliers if unstated in raw telemetry
+  defaults:
+    F_SME: 1.05
+    F_perm: 0.98
+    alpha: 0.90

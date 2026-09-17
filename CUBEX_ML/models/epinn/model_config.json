@@ -1,0 +1,11 @@
+{
+  "input_dim": 26,
+  "hidden_dims": [
+    128,
+    128,
+    64
+  ],
+  "activation": "silu",
+  "dropout": 0.05,
+  "pe_aux_mode": "verbatim"
+}

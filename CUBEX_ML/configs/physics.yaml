@@ -1,0 +1,48 @@
+physics:
+  # Mode for PE_aux computation:
+  # 'verbatim': PE_aux = EC_hardware - EF_grid (Preserves supplied formula verbatim, though dimensionally inconsistent)
+  # 'physical': PE_aux = EC_hardware * EF_grid (Dimensionally consistent energy * emission_factor)
+  pe_aux_mode: "verbatim"
+  
+  # Relaxation parameter for smooth hinge in E_reduced during training
+  smooth_hinge_beta: 10.0
+  
+  # Physical constants and reference defaults
+  default_constants:
+    molar_mass_co2: 44.01 # g/mol
+    rho_water: 1000.0 # kg/m3
+    g_accel: 9.80665 # m/s2
+
+  # Unit declarations
+  canonical_units:
+    FC_actual: "tonnes"
+    FC_baseline: "tonnes"
+    NCV: "MJ/kg"
+    EF_CO2: "tCO2/tonnes"
+    OF: "dimensionless"
+    EC_actual: "kWh"
+    EC_baseline: "kWh"
+    EF_grid: "tCO2/kWh"
+    M_captured: "tonnes"
+    P_CO2: "dimensionless"
+    eta_purity: "dimensionless"
+    M_byproduct: "tonnes"
+    EF_virgin_displace: "tCO2e/t"
+    H_recovered: "MJ"
+    eta_boiler: "dimensionless"
+    NCV_fuel: "MJ/kg"
+    EF_CO2_fuel: "tCO2/MJ"
+    P_fan: "kW"
+    P_pump: "kW"
+    t_op: "seconds"
+    M_solvent_makeup: "tonnes"
+    EF_solvent_LCA: "tCO2e/t"
+    gamma_slip: "dimensionless"
+    D_k: "km"
+    EF_vehicle_k: "tCO2e/t-km"
+    M_trans_k: "tonnes"
+    F_valid: "dimensionless"
+    F_SME: "dimensionless"
+    F_perm: "dimensionless"
+    alpha: "dimensionless"
+    CC_T: "tCO2e"

@@ -1,0 +1,32 @@
+model:
+  architecture:
+    input_dim: 26
+    hidden_dims: [128, 128, 64]
+    activation: "silu"  # Smooth activation (SiLU / Swish) ideal for PINN derivatives
+    dropout: 0.05
+    use_batch_norm: false
+    use_layer_norm: true
+    
+  training:
+    epochs: 100
+    batch_size: 32
+    learning_rate: 0.001
+    weight_decay: 1.0e-5
+    lr_scheduler: "cosine"
+    early_stopping_patience: 25
+    grad_clip_norm: 1.0
+    
+  augmented_lagrangian:
+    initial_mu: 1.0
+    initial_lambda: 0.0
+    mu_inflation_rate: 1.5
+    max_mu: 1.0e5
+    tolerance: 1.0e-3
+    update_frequency_epochs: 1
+
+  loss_weights:
+    w_data: 1.0
+    w_physics: 1.0
+    w_cc: 1.0  # Normalized dynamically or set based on characteristic scale
+    w_consistency: 1.0
+    w_constraints: 1.0

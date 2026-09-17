@@ -1,0 +1,30 @@
+simulation:
+  sampling_rate_hz: 1.0
+  random_seed: 42
+  ambient_co2_baseline_ppm: 420.0
+  ambient_temperature_baseline_c: 25.0
+  ambient_humidity_baseline_percent: 50.0
+
+process:
+  fan_min_rpm: 1000.0
+  fan_max_rpm: 2000.0
+  max_flow_l_min: 500.0
+  capture_efficiency_base: 0.8
+  fan_response_rate: 0.2
+  flow_per_rpm: 0.25
+
+sensor_noise:
+  co2_noise_std: 1.5
+  temperature_noise_std: 0.2
+  humidity_noise_std: 0.5
+  flow_noise_std: 2.0
+  captured_co2_noise_std: 0.01
+  fan_speed_noise_std: 5.0
+
+serial:
+  default_port: "COM10"
+  baud_rate: 9600
+  timeout: 1.0
+
+logging:
+  level: "INFO"

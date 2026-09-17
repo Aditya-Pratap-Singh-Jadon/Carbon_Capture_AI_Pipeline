@@ -1,0 +1,3 @@
+initial_state:
+  ambient_co2: 420.0
+  fan_command: 1000.0

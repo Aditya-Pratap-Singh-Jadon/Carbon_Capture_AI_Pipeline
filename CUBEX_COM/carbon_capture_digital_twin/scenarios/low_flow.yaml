@@ -1,0 +1,2 @@
+process_faults:
+  low_flow: true

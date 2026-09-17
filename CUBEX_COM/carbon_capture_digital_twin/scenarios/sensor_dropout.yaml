@@ -1,0 +1,3 @@
+sensor_faults:
+  co2_ppm:
+    dropout: true

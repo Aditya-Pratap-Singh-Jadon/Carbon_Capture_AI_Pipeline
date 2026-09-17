@@ -1,0 +1,18 @@
+project_name: "carbon_capture_ai"
+version: "1.0.0"
+random_seed: 42
+device: "auto"  # 'auto', 'cpu', or 'cuda'
+
+paths:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  synthetic_data_dir: "data/synthetic"
+  output_dir: "data/outputs"
+  epinn_model_dir: "models/epinn"
+  scaler_dir: "models/scalers"
+  rl_model_dir: "models/rl"
+  reports_dir: "reports/generated"
+
+logging:
+  level: "INFO"
+  format: "[%(asctime)s] [%(levelname)s] [%(name)s]: %(message)s"
