@@ -8,7 +8,7 @@ const Home = () => {
         <span className="text-gradient">CubeX</span> Exchange
       </h1>
       <p style={{ fontSize: '1.5rem', color: '#aaa', maxWidth: '800px', margin: '0 auto 40px' }}>
-        The premier marketplace for Carbon Credit assets. secure, transparent, and decentralized trading on Sepolia.
+        The premier marketplace for Carbon Credit assets. secure, transparent, and decentralized trading.
       </p>
       
       <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginBottom: '80px' }}>
